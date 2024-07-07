@@ -1,6 +1,6 @@
 {
 	"name": "format-converter",
-	"version": "1.1.1",
+	"version": "1.2.1",
 	"description": "A Simple LightWeight Module, Compatible with any JavaScript Framework to Convert all of your image to WebP format.",
 	"main": "./src/index.js",
 	"types": "./src/.d.ts",
