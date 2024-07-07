@@ -18,52 +18,66 @@ npm install format-converter
 
 ## Usage
 
-Here's how you can use the `ToWebP` function to convert an image file to WebP format:
+Here's how you can use the `toWebP` function to convert an image file to WebP format:
 
 ### Importing the module
 
 If you are using a module bundler like Webpack or Rollup, you can import the function:
 
 ```javascript
-import { ToWebP } from 'format-converter';
+import { toWebP } from "format-converter";
 ```
 
 ### Converting an image to WebP
 
-To convert an image file to WebP format, use the `ToWebP` function:
+To convert an image file to WebP format, use the `toWebP` function:
 
 ```javascript
-
-const webpData = await ToWebP(imageFile);
-
+const webpData = await toWebP(imageFile);
 ```
 
 ### Example
 
-Here is a complete example of how to use the `ToWebP` function:
+Here is a complete example of how to use the `toWebP` function:
 
 ```javascript
-import { ToWebP } from 'format-converter';
+import { toWebP } from "format-converter";
 
 const imageFile = document.querySelector('input[type="file"]').files[0];
 
-ToWebP(imageFile)
-    .then(webpBlob => {
-        console.log('Image converted to WebP format:', webpBlob);
-        // Do something with the WebP blob, e.g., create a URL for it
-        const webpURL = URL.createObjectURL(webpBlob);
-        const imgElement = document.createElement('img');
-        imgElement.src = webpURL;
-        document.body.appendChild(imgElement);
-    })
-    .catch(error => {
-        console.error('Error converting image to WebP:', error);
-    });
+toWebP(imageFile)
+	.then((webpBlob) => {
+		// Do something with the WebP blob, e.g., create a URL for it
+		const webpURL = URL.createObjectURL(webpBlob);
+		const imgElement = document.createElement("img");
+		imgElement.src = webpURL;
+		document.body.appendChild(imgElement);
+	})
+	.catch((error) => {
+		console.error("Error converting image to WebP:", error);
+	});
+```
+
+Here is a complete example using the `toWebP` function and downloading the converted image:
+
+```javascript
+import { toWebP } from "format-converter";
+
+const handleConvert = async (file) => {
+	if (!file) return;
+	const res = await toWebP(file);
+
+	const downloadUrl = window.URL.createObjectURL(res);
+	const downloadUrl = document.createElement("a");
+	a.href = url;
+	a.download = "test.webp";
+	a.click();
+};
 ```
 
 ## API
 
-### `ToWebP(imageFile)`
+### `toWebP(imageFile)`
 
 #### Parameters
 
@@ -82,4 +96,4 @@ If you'd like to contribute to this project, please open an issue or submit a pu
 This project is licensed under the MIT License.
 
 | **Like this package?** Help others know why they should use it! **Share it on Linked In** |
-| ----------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------------------------------------------------------------------- |
