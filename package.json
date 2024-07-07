@@ -1,29 +1,34 @@
 {
-  "name": "format-converter",
-  "version": "1.1.0",
-  "description": "A Simple LightWeight Module, Compatible with any JavaScript Framework to Convert all of your image to WebP format.",
-  "main": "FormatConverter.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liljemery/FormatConverter.git"
-  },
-  "keywords": [
-    "format",
-    "converter",
-    "webp",
-    "png",
-    "jpg"
-  ],
-  "author": "Jeremy Inoa Fortuna",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liljemery/FormatConverter/issues"
-  },
-  "homepage": "https://github.com/liljemery/FormatConverter#readme",
-  "dependencies": {
-    "format-converter": "^1.0.0"
-  }
+	"name": "format-converter",
+	"version": "1.1.1",
+	"description": "A Simple LightWeight Module, Compatible with any JavaScript Framework to Convert all of your image to WebP format.",
+	"main": "./src/index.js",
+	"types": "./src/.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/liljemery/FormatConverter.git"
+	},
+	"keywords": [
+		"format",
+		"converter",
+		"webp",
+		"png",
+		"jpg"
+	],
+	"author": {
+		"name": "Jeremy Inoa Fortuna",
+		"email": "jeremy.inoafort@gmail.com",
+		"url": "https://github.com/liljemery"
+	},
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/liljemery/FormatConverter/issues"
+	},
+	"homepage": "https://github.com/liljemery/FormatConverter#readme",
+	"dependencies": {
+		"format-converter": "^1.0.0"
+	}
 }
