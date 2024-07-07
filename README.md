@@ -1,5 +1,7 @@
 # Format Converter
 
+![NPM Downloads](https://img.shields.io/npm/dw/format-converter)
+
 ![FormatConverter](https://github.com/liljemery/FormatConverter/assets/112432349/6efb87fd-cb18-4864-aa5d-4d78da8ecb1f)
 
 ## Description
@@ -78,3 +80,6 @@ If you'd like to contribute to this project, please open an issue or submit a pu
 ## License
 
 This project is licensed under the MIT License.
+
+| **Like this package?** Help others know why they should use it! **Share it on Linked In** |
+| ----------------------------------------------------------------------------------------------------------------------------------------- |
