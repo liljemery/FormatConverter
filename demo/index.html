@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>format-converter — live demo</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<div class="page">
+			<header class="hero">
+				<p class="eyebrow">Browser-side · zero upload</p>
+				<h1>format-converter</h1>
+				<p class="lede">
+					Pick an image, choose a format, optionally resize, then download.
+					Same API as the npm package:
+					<code>toFormat(file, options)</code>
+				</p>
+				<a
+					class="github"
+					href="https://github.com/liljemery/FormatConverter"
+					target="_blank"
+					rel="noreferrer"
+					>GitHub</a
+				>
+			</header>
+
+			<main class="panel">
+				<label class="field">
+					<span class="label">Image</span>
+					<input id="file" type="file" accept="image/*" />
+				</label>
+
+				<div class="row">
+					<label class="field grow">
+						<span class="label">Format</span>
+						<select id="format"></select>
+					</label>
+					<label class="field narrow">
+						<span class="label">Quality</span>
+						<input
+							id="quality"
+							type="number"
+							min="0"
+							max="1"
+							step="0.05"
+							value="0.92"
+						/>
+					</label>
+				</div>
+
+				<div class="row">
+					<label class="field grow">
+						<span class="label">Max width (px)</span>
+						<input id="maxW" type="number" min="1" placeholder="optional" />
+					</label>
+					<label class="field grow">
+						<span class="label">Max height (px)</span>
+						<input id="maxH" type="number" min="1" placeholder="optional" />
+					</label>
+				</div>
+
+				<div class="row">
+					<label class="field grow">
+						<span class="label">Exact width (px)</span>
+						<input id="w" type="number" min="1" placeholder="optional" />
+					</label>
+					<label class="field grow">
+						<span class="label">Exact height (px)</span>
+						<input id="h" type="number" min="1" placeholder="optional" />
+					</label>
+					<label class="field grow">
+						<span class="label">Fit (when W&amp;H set)</span>
+						<select id="fit">
+							<option value="contain">contain</option>
+							<option value="cover">cover</option>
+							<option value="fill">fill</option>
+						</select>
+					</label>
+				</div>
+
+				<p id="status" class="status" role="status"></p>
+
+				<div class="actions">
+					<button id="convert" type="button" class="primary" disabled>
+						Convert &amp; preview
+					</button>
+					<button id="download" type="button" disabled>Download</button>
+				</div>
+
+				<figure class="preview-wrap">
+					<img id="preview" alt="Converted preview" hidden />
+				</figure>
+			</main>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>

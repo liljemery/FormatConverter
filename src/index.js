@@ -1,2 +1,11 @@
-import { toWebP, toPNG, toJPG, toPDF } from "./FormatConverter";
-export { toWebP, toPNG, toJPG, toPDF };
+export {
+	toFormat,
+	toWebP,
+	toPNG,
+	toJPG,
+	toJPEG,
+	toAVIF,
+	toPDF,
+	getSupportedOutputFormats,
+	computeDrawLayout,
+} from "./FormatConverter.js";

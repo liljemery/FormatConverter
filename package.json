@@ -1,11 +1,15 @@
 {
 	"name": "format-converter",
-	"version": "1.2.1",
-	"description": "A Simple LightWeight Module, Compatible with any JavaScript Framework to Convert all of your image to WebP format.",
+	"version": "2.0.0",
+	"type": "module",
+	"description": "Lightweight browser-side image format conversion: WebP, PNG, JPEG, AVIF, PDF — with optional resize. Works with any framework.",
 	"main": "./src/index.js",
 	"types": "./src/.d.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"demo": "vite --config vite.demo.config.js",
+		"build:demo": "vite build --config vite.demo.config.js"
 	},
 	"repository": {
 		"type": "git",
@@ -16,7 +20,13 @@
 		"converter",
 		"webp",
 		"png",
-		"jpg"
+		"jpg",
+		"jpeg",
+		"avif",
+		"pdf",
+		"resize",
+		"canvas",
+		"browser"
 	],
 	"author": {
 		"name": "Jeremy Inoa Fortuna",
@@ -28,7 +38,12 @@
 		"url": "https://github.com/liljemery/FormatConverter/issues"
 	},
 	"homepage": "https://github.com/liljemery/FormatConverter#readme",
-	"dependencies": {
-		"format-converter": "^1.0.0"
-	}
+	"devDependencies": {
+		"happy-dom": "^17.4.4",
+		"vite": "^6.2.2",
+		"vitest": "^3.0.9"
+	},
+	"files": [
+		"src"
+	]
 }
